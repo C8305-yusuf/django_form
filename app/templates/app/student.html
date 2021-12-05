@@ -1,0 +1,21 @@
+{% extends "app/base.html" %} 
+
+{% block container %}
+<!-- <form action="">
+  <label for="">student name</label>
+  <input type="text" />
+  <input type="submit" value="OK" />
+</form> -->
+  
+
+<div style="width:750px; background-color:aqua" >
+    {% load crispy_forms_tags %}
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %} {{ form | crispy }}
+        <input type="submit" value="OK" />
+    </form>
+</div>
+
+
+
+{% endblock container %}
